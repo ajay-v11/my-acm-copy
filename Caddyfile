@@ -1,5 +1,5 @@
 # Single domain setup
-www.agri-receipts.in {
+acm-receipts.ajay-v11.tech {
     # API routes
     handle /api/* {
         reverse_proxy server:3000
@@ -33,7 +33,3 @@ www.agri-receipts.in {
     }
 }
 
-# Redirect naked domain to www
-agri-receipts.in {
-    redir https://www.agri-receipts.in{uri} permanent
-}

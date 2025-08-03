@@ -16,7 +16,7 @@ services:
       - server
 
   frontend:
-    image: ghcr.io/agrireceipts/base-1-frontend:latest
+    image: ghcr.io/ajay-v11/my-acm-copy-frontend:latest
     expose:
       - '80'
     restart: unless-stopped
@@ -24,13 +24,13 @@ services:
       - server
 
   server:
-    image: ghcr.io/agrireceipts/base-1-server:latest
+    image: ghcr.io/ajay-v11/my-acm-copy-server:latest
     restart: unless-stopped
     # This is the key line, just like your local setup
     env_file:
       - server/.env.production
     environment:
-      - FRONTEND_URL=https://www.agri-receipts.in
+      - FRONTEND_URL=https://acm-receipts.ajay-v11.tech
       - NODE_ENV=production # Also important for security settings
       - SESSION_SECRET=${SESSION_SECRET} # Make sure to set this in your .env file!
     expose:

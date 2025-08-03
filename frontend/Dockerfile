@@ -4,7 +4,7 @@ WORKDIR /app
 
 
 
-ENV VITE_API_BASE_URL=https://www.agri-receipts.in/api
+ENV VITE_API_BASE_URL=https://acm-receipts.ajay-v11.tech/api
 
 
 COPY package*.json ./
